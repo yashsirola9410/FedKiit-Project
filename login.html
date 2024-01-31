@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 500px;
+      width: 300px;
+      margin: 0;
+    }
+
+    .login-container {
+      position: relative;
+    }
+    
+    .login-box {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-box label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-box button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container btn btn-danger">
+    <button  class="btn-danger" onclick="toggleLoginBox()">Login</button>
+
+    <div class="login-box" id="loginBox">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="rollNo">Roll Number:</label>
+      <input type="text" id="rollNo" name="rollNo" required>
+
+      <button type="submit" class="btn btn-danger">Login</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleLoginBox() {
+      var loginBox = document.getElementById("loginBox");
+      loginBox.style.display = (loginBox.style.display === "none") ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
